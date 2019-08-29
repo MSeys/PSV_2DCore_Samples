@@ -48,4 +48,10 @@ You can use this to fake a View Camera for a 2D sidescroller for example.
 
 Transformations do depend on each other, translation does get scaled with the given scale, if you wish to have another translation independent from translation, do tell.
 
-If you have any further questions, be sure to contact me on Discord. (Matthias#8282)
+# Like what I do?
+Maybe send a small donation to let me know that you appreciate the work!
+
+[Paypal](https://www.paypal.me/mattseys)
+
+# Questions or help needed?
+Contact me on Discord. (Matthias#8282)
