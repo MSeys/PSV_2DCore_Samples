@@ -55,3 +55,4 @@ Maybe send a small donation to let me know that you appreciate the work!
 
 # Questions or help needed?
 Contact me on Discord. (Matthias#8282)
+Contact me on [Twitter](https://twitter.com/seys_matthias).
