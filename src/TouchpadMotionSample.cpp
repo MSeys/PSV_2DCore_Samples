@@ -28,18 +28,18 @@ void TouchpadMotionSample::Draw() const
 	for(Point2f point : m_FrontTouches)
 	{
 		if (point.x != 0 && point.y != 0)
-			FillCircle(point, 10, m_Color);
+			FillCircle(point, 10);
 	}
 	
 	for (Point2f point : m_BackTouches)
 	{
 		if(point.x != 0 && point.y != 0)
-			FillCircle(point, 10, Color4{ 0, 0, 0, 100 });
+			FillCircle(point, 10, C3_BLACK, 100);
 	}
 	
 	// drawing some quick information
-	Bank::FindFont("ArialRoundedMTBold")->Draw(Point2f{ 5, float(SCREEN_HEIGHT) - 30 }, m_Color, 20, "Use D-Pad UP/DOWN to switch...", BOTTOM_LEFT);
-	Bank::FindFont("ArialRoundedMTBold")->Draw(Point2f{ 5, float(SCREEN_HEIGHT) - 5 }, m_Color, 20, "Current: " + m_TMModeStrings[m_TouchMotionMode], BOTTOM_LEFT);
+	Bank::FindFont("ArialRoundedMTBold")->Draw(Point2f{ 5, float(SCREEN_HEIGHT) - 30 }, 20, "Use D-Pad UP/DOWN to switch...", BOTTOM_LEFT);
+	Bank::FindFont("ArialRoundedMTBold")->Draw(Point2f{ 5, float(SCREEN_HEIGHT) - 5 }, 20, "Current: " + m_TMModeStrings[m_TouchMotionMode], BOTTOM_LEFT);
 }
 
 void TouchpadMotionSample::ProcessKeyDownEvent(const PSV_ButtonEvent& bEvent)

@@ -59,6 +59,8 @@ add_executable(${PROJECT_NAME}
   src/structs.h
   src/utils.cpp
   src/utils.h
+  src/Colors.cpp
+  src/Colors.h
   src/PSV_Core.cpp
   src/PSV_Core.h
   src/PSV_Utils.cpp

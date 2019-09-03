@@ -23,5 +23,4 @@ public:
 	
 	void ProcessKeyUpEvent(const PSV_ButtonEvent& bEvent);
 	void ProcessKeyDownEvent(const PSV_ButtonEvent& bEvent);
-	void ProcessKeyHeldEvent(const PSV_ButtonEvent& bEvent);
 };

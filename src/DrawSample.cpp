@@ -70,9 +70,9 @@ void DrawSample::Draw() const
 
 void DrawSample::DrawRectangles() const
 {
-	DrawRect(Rectf{ 5, 5, float(SCREEN_WIDTH) - 5, float(SCREEN_HEIGHT) - 5 }, Color4{ 255, 255, 255, 255 }, 5);
+	DrawRect(Rectf{ 5, 5, float(SCREEN_WIDTH) - 5, float(SCREEN_HEIGHT) - 5 }, 5);
 	FillRect(Rectf{ 150, 300, 263, 75 }, Color4{ 125, 230, 153, 255 });
-	DrawRect(Rectf{ 450, 211, 100, 125 }, Color4{ 255, 255, 255, 255 }, 3);
+	DrawRect(Rectf{ 450, 211, 100, 125 }, 3);
 	FillRect(Rectf{ 300, 100, 153, 245 }, Color4{ 0, 125, 240, 255 });
 }
 
@@ -86,9 +86,9 @@ void DrawSample::DrawCircles() const
 
 void DrawSample::DrawLines() const
 {
-	DrawLine(Point2f{ 0, 0 }, Point2f{ float(SCREEN_WIDTH), float(SCREEN_HEIGHT) }, Color4{ 255, 255, 255, 255 }, 5);
-	DrawLine(Point2f{ 0, float(SCREEN_HEIGHT) }, Point2f{ float(SCREEN_WIDTH), 0 }, Color4{ 164, 67, 148, 255 }, 10);
-	DrawLine(Point2f{ 100, 50 }, Point2f{ 348, 183 }, Color4{ 30, 145, 255, 255 }, 10);
+	DrawLine(Point2f{ 0, 0 }, Point2f{ float(SCREEN_WIDTH), float(SCREEN_HEIGHT) }, 5);
+	DrawLine(Point2f{ 0, float(SCREEN_HEIGHT) }, Point2f{ float(SCREEN_WIDTH), 0 }, 10, Color3{ 164, 67, 148 }, 255);
+	DrawLine(Point2f{ 100, 50 }, Point2f{ 348, 183 }, 10, Color3{ 30, 145, 255 }, 255);
 }
 
 void DrawSample::DrawTextures() const
@@ -102,9 +102,9 @@ void DrawSample::DrawTextures() const
 
 void DrawSample::DrawText() const
 {
-	Bank::FindFont("ArialRoundedMTBold")->Draw(Point2f{ 5, float(SCREEN_HEIGHT) - 5 }, Color4{ 255, 255, 255, 255 }, 18, "Press Triangle to change centered text.", BOTTOM_LEFT);
-	Bank::FindFont("ArialRoundedMTBold")->Draw(Point2f{ float(SCREEN_WIDTH) / 2, float(SCREEN_HEIGHT) / 2 }, Color4{ 255, 255, 255, 255 }, 30, m_ChangeText, MID_CENTER);
-	Bank::FindFont("ArialRoundedMTBold")->Draw(Point2f{ float(SCREEN_WIDTH) / 2, 55 }, Color4{ 255, 255, 255, 255 }, 40, "Hello World!", MID_CENTER);
+	Bank::FindFont("ArialRoundedMTBold")->Draw(Point2f{ 5, float(SCREEN_HEIGHT) - 5 }, 18, "Press Triangle to change centered text.", BOTTOM_LEFT);
+	Bank::FindFont("ArialRoundedMTBold")->Draw(Point2f{ float(SCREEN_WIDTH) / 2, float(SCREEN_HEIGHT) / 2 }, 30, m_ChangeText, MID_CENTER);
+	Bank::FindFont("ArialRoundedMTBold")->Draw(Point2f{ float(SCREEN_WIDTH) / 2, 55 }, 40, "Hello World!", MID_CENTER);
 }
 
 void DrawSample::ProcessKeyDownEvent(const PSV_ButtonEvent& bEvent)

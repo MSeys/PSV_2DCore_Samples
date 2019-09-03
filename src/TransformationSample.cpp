@@ -21,7 +21,7 @@ void TransformationSample::Draw() const
 		PSV_Translate(m_Translations.x, m_Translations.y);
 		PSV_Scale(m_Scale, m_Scale);
 		FillCircle(Circlef{ 100, 100, 30 });
-		Bank::FindFont("ArialRoundedMTBold")->Draw(Point2f{ float(SCREEN_WIDTH) / 2, float(SCREEN_HEIGHT) / 2 }, Color4{ 255, 255, 255, 255 }, 20, "Centered at Translate (0, 0)", MID_CENTER);
+		Bank::FindFont("ArialRoundedMTBold")->Draw(Point2f{ float(SCREEN_WIDTH) / 2, float(SCREEN_HEIGHT) / 2 }, 20, "Centered at Translate (0, 0)", MID_CENTER);
 		firstTranslate = PSV_Translations[PSV_CT];
 	
 		PSV_Begin(); // begin 2
@@ -35,10 +35,10 @@ void TransformationSample::Draw() const
 		PSV_End(); // end 2
 	PSV_End(); // end 1
 
-	Bank::FindFont("ArialRoundedMTBold")->Draw(Point2f{ 5, 5 }, Color4{ 255, 255, 255, 255 }, 20, "Always at (5, 5) - Position from TOP_LEFT", TOP_LEFT);
+	Bank::FindFont("ArialRoundedMTBold")->Draw(Point2f{ 5, 5 }, 20, "Always at (5, 5) - Position from TOP_LEFT", TOP_LEFT);
 	
-	Bank::FindFont("ArialRoundedMTBold")->Draw(Point2f{ 5, float(SCREEN_HEIGHT) - 55 }, Color4{ 255, 255, 255, 255 }, 20, std::to_string(firstTranslate.x) + " - " + std::to_string(firstTranslate.y), BOTTOM_LEFT);
-	Bank::FindFont("ArialRoundedMTBold")->Draw(Point2f{ 5, float(SCREEN_HEIGHT) - 30 }, Color4{ 255, 255, 255, 255 }, 20, std::to_string(secondTranslate.x) + " - " + std::to_string(secondTranslate.y), BOTTOM_LEFT);
+	Bank::FindFont("ArialRoundedMTBold")->Draw(Point2f{ 5, float(SCREEN_HEIGHT) - 55 }, 20, std::to_string(firstTranslate.x) + " - " + std::to_string(firstTranslate.y), BOTTOM_LEFT);
+	Bank::FindFont("ArialRoundedMTBold")->Draw(Point2f{ 5, float(SCREEN_HEIGHT) - 30 }, 20, std::to_string(secondTranslate.x) + " - " + std::to_string(secondTranslate.y), BOTTOM_LEFT);
 }
 
 void TransformationSample::Update(float elapsedSec)

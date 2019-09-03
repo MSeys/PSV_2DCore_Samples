@@ -10,7 +10,6 @@ class TouchpadMotionSample
 {
 	std::vector<Point2f> m_FrontTouches; // 6 is max for front
 	std::vector<Point2f> m_BackTouches; // 4 is max for back
-	Color4 m_Color{ 255, 255, 255, 255 };
 
 	std::vector<std::string> m_TMModeStrings{ "Touchpad Down", "Touchpad Up", "Touchpad Motion" };
 	TouchMotionMode m_TouchMotionMode{ TOUCHPAD_DOWN };

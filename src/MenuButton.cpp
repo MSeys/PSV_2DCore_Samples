@@ -1,7 +1,4 @@
 #include "MenuButton.h"
-#include <utility>
-
-#include "Texture.h"
 
 MenuButton::MenuButton(const Point2f& pos, std::string text)
 	: m_Text(std::move(text))
@@ -30,7 +27,7 @@ void MenuButton::Draw() const
 	}
 
 	Bank::FindUI("button_sheet")->Draw(m_Pos, srcRect);
-	Bank::FindFont("ArialRoundedMTBold")->Draw(Point2f{ m_Pos.x + offsetX, m_Pos.y + offsetY }, Color4{ 255, 255, 255, 255 }, 25, m_Text, MID_LEFT);
+	Bank::FindFont("ArialRoundedMTBold")->Draw(Point2f{ m_Pos.x + offsetX, m_Pos.y + offsetY }, 25, m_Text, MID_LEFT);
 }
 
 void MenuButton::SetSelected(bool value)
